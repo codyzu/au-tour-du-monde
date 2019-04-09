@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'bootswatch/dist/cyborg/bootstrap.css'; // eslint-disable-line import/no-unassigned-import
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

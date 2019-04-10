@@ -1,15 +1,19 @@
-import React, { Component } from 'react';
-import {Container, Row, Col} from 'reactstrap';
+import React from 'react';
+import {Container} from 'reactstrap';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Home from './Home';
+import Wifi from './Wifi';
 
 const App = () => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1 className="text-warning">Au Tour Du Monde</h1>
-        </Col>
-      </Row>
-    </Container>
+    <BrowserRouter>
+      <Container>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/wifi" component={Wifi}/>
+        </Switch>
+      </Container>
+    </BrowserRouter>
   );
 }
 

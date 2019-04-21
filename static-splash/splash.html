@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="images/bootstrap-cyborg-nofonts.min.css">
+
+  <title>Au Tour du Monde Wifi</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <h4 class="text-warning">Au Tour du Monde</h4>
+        <h5>Free Wifi!</h5>
+      </div>
+      <div class="xs-auto">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-outline-warning active">
+            <input type="radio" name="language" id="language-fr" autocomplete="off" value="fr" checked>fr
+          </label>
+          <label class="btn btn-outline-warning">
+            <input type="radio" name="language" id="language-en" autocomplete="off" value="en">en
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" id="disclaimer-text">
+        <div id="disclaimer-fr" class="disclaimer">
+          <p>
+            En utilisant ce réseau wifi gratuit, vous acceptez de respecter toutes les lois locales et nationales.
+          </p>
+          <p>
+            Ceci est un restaurant familial, le contenu inapproprié pour les enfants est interdit.
+            Respectez les lois sur le droit d'auteur. Pas de téléchargements illégaux sur notre réseau.
+          </p>
+        </div>
+        <div id="disclaimer-en" class="disclaimer" hidden>
+          <p>
+            By using this free wifi network, you agree to follow all local and national laws.
+          </p>
+          <p>
+            This is a family restaurant, content inappropriate for children is forbidden.
+            Respect copyright laws. No illegal downloads on our network.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <form>
+          <div class="form-group">
+            <label for="wifi-email">Email:<sup class="text-danger">*</sup></label>
+            <input type="email" class="form-control" id="wifi-email" aria-describedby="emailHelp"
+              placeholder="email address" required>
+          </div>
+          <button type="submit" class="btn btn-warning">Access Wifi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="images/jquery-3.4.0.min.js"></script>
+  <script src="images/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Toggle hidden attribute of language elements
+      $('input[name=language]').change(function (e) {
+        $('.disclaimer').each(function () {
+          this.hidden = !(this.hidden === true);
+        });
+      })
+    })
+  </script>
+</body>
+
+</html>

@@ -54,12 +54,14 @@
     </div>
     <div class="row">
       <div class="col">
-        <form>
+        <form method="GET" action="$authaction">
           <div class="form-group">
             <label for="wifi-email">Email:<sup class="text-danger">*</sup></label>
-            <input type="email" class="form-control" id="wifi-email" aria-describedby="emailHelp"
+            <input type="email" class="form-control" id="wifi-email" name="username" aria-describedby="emailHelp"
               placeholder="email address" required>
           </div>
+          <input type='hidden' name='tok' value='$tok' />
+          <input type='hidden' name='redir' value='$redir' />
           <button type="submit" class="btn btn-warning">Access Wifi</button>
         </form>
       </div>
@@ -70,16 +72,9 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="images/jquery-3.4.0.min.js"></script>
   <script src="images/bootstrap.bundle.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Toggle hidden attribute of language elements
-      $('input[name=language]').change(function (e) {
-        $('.disclaimer').each(function () {
-          this.hidden = !(this.hidden === true);
-        });
-      })
-    })
-  </script>
+
+  <!-- Load the script that changes the language, after jquery -->
+  <script src="images/language-changer.js"></script>
 </body>
 
 </html>
